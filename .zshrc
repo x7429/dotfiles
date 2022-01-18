@@ -1,5 +1,5 @@
-export PROMPT='%U%F{51}%n%f%u: [%~]$%b '
-export RPROMPT='%(?.%F{#00ff00}√.%F{#ff0000}%?)'
+export PROMPT='%B%U%F{#00FFFF}%n%f%u: [%~]$%b '
+export RPROMPT='%(?.%F{#50C878}√.%F{#DC143C}%?)'
 export LS_COLORS='ow=1;34:'
 
 HISTFILE=~/.histfile
