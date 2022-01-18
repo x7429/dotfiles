@@ -1,4 +1,5 @@
-export PROMPT='%B%F{cyan}[%n@%m%f %~%F{cyan}]$%b%f '
+export PROMPT='%U%F{51}%n%f%u: [%~]$%b '
+export RPROMPT='%(?.%F{#00ff00}√.%F{#ff0000}%?)'
 export LS_COLORS=$LS_COLORS:'ow=1;34:'
 
 HISTFILE=~/.histfile
