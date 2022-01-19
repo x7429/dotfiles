@@ -14,6 +14,7 @@ autoload -Uz compinit
 compinit
 
 alias ..='cd ..'
+alias clone='git clone'
 alias ls='ls --color=auto'
 alias paci='sudo pacman -S --needed'
 alias pacr='sudo pacman -Rns'
