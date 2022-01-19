@@ -1,6 +1,8 @@
+export LS_COLORS='ow=1;34:'
+export PATH=$PATH:~/.local/bin
+
 export PROMPT='%B%U%F{#00FFFF}%n%f%u: [%~]$%b '
 export RPROMPT='%(?.%F{#50C878}√.%F{#DC143C}%?)'
-export LS_COLORS='ow=1;34:'
 
 HISTFILE=~/.histfile
 HISTSIZE=5000
