@@ -1,6 +1,6 @@
 local packer = require 'packer'
 packer.init{
-	ensure_dependencies = false, -- Should packer install plugin dependencies?
+	ensure_dependencies = true, -- Should packer install plugin dependencies?
 	-- package_root = util.join_paths(vim.fn.stdpath('data'), 'site', 'pack'),
 	-- compile_path = util.join_paths(vim.fn.stdpath('config'), 'plugin', 'packer_compiled.lua'),
 	plugin_package = 'packer', -- The default package for plugins
@@ -27,5 +27,9 @@ packer.startup(function()
 	use{
 		'wbthomason/packer.nvim',
 		opt = false
+	}
+	use {
+		'nvim-telescope/telescope.nvim',
+		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 end)
