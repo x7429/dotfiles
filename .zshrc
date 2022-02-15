@@ -1,8 +1,12 @@
-export LS_COLORS='ow=1;34:'
-export PATH=$PATH:~/.local/bin
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"; fi
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export PROMPT='%B%U%F{#00FFFF}%n%f%u: [%~]$%b '
-export RPROMPT='%(?.%F{#50C878}√.%F{#DC143C}%?)'
+export LS_COLORS='ow=1;34:'
+# export PATH=$PATH:~/.local/bin
+
+# export PROMPT='%B%U%F{#00FFFF}%n%f%u: [%~]$%b '
+# export RPROMPT='%(?.%F{#50C878}√.%F{#DC143C}%?)'
 
 HISTFILE=~/.histfile
 HISTSIZE=5000
@@ -26,4 +30,4 @@ alias v='nvim'
 
 bindkey "\e[3~" delete-char
 
-cat ~/.cache/wal/sequences
+# cat ~/.cache/wal/sequences
