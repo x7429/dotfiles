@@ -19,6 +19,8 @@ local options = {
 	-- sidescrolloff = 10,
 	swapfile = false,
 	tabstop = 4,
+	title = true,
+	titlestring = "nvim",
 }
 
 for k, v in pairs(options) do vim.opt[k] = v end
