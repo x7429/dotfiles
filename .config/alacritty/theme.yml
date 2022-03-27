@@ -1,0 +1,31 @@
+colors:
+  primary:
+    background: '0x101010'
+    foreground: '0xFFFFFF'
+
+  normal:
+    black:   '0x0C0A0B' # V
+    red:     '0xFE0016' # V
+    green:   '0x87FFAF' # V
+
+#   yellow:  '0x3b473f'
+#   blue:    '0x56675b'
+#   magenta: '0x768d7d'
+#   cyan:    '0x9cb9a5'
+
+    white:   '0xffffff' # V
+
+  bright:
+    black:   '0x999999' # V
+    red:     '0xFE0016' # V
+
+#   green:   '0x91cbd1'
+
+    yellow:  '0xAD831B' # V
+
+#   blue:    '0xc0bb83'
+#   magenta: '0xdfd9a4'
+
+    cyan:    '0x88e3eb' # V
+
+#   white:   '0x008568'
